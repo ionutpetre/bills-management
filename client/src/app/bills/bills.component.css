@@ -1,0 +1,6 @@
+.row {
+  display: inline-block;
+  width: 1000px;
+  margin: 30px;
+  background-color: #fdfdfd;
+}

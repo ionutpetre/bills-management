@@ -1,0 +1,12 @@
+.bill-form {
+  width: 800px;
+  padding: 40px;
+}
+
+.bill-form .mat-form-field {
+  width: 100%;
+}
+
+.bill-form .mat-button {
+  width: 100%;
+}

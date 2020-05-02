@@ -1,0 +1,63 @@
+<div class="bill-form">
+  <div>
+    <h2>Create bill</h2>
+  </div>
+  <div>
+    <mat-form-field appearance="outline">
+      <mat-label>Bill type</mat-label>
+      <input matInput placeholder="Bill type" [(ngModel)]="bill.type" />
+      <mat-icon matSuffix>category</mat-icon>
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field appearance="outline">
+      <mat-label>Bill title</mat-label>
+      <input matInput placeholder="Bill title" [(ngModel)]="bill.title" />
+      <mat-icon matSuffix>subtitles</mat-icon>
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field appearance="outline">
+      <mat-label>Bill description</mat-label>
+      <textarea
+        matInput
+        placeholder="Bill description"
+        [(ngModel)]="bill.description"
+      ></textarea>
+      <mat-icon matSuffix>description</mat-icon>
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field appearance="outline">
+      <mat-label>Bill value</mat-label>
+      <input matInput type="number" [(ngModel)]="bill.value" />
+      <mat-icon matSuffix>monetization_on</mat-icon>
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field appearance="outline">
+      <input
+        matInput
+        [matDatepicker]="billDatepicker"
+        placeholder="Bill date"
+        [(ngModel)]="bill.created"
+      />
+      <mat-datepicker-toggle matSuffix [for]="billDatepicker">
+        <mat-icon matDatepickerToggleIcon
+          >date_range</mat-icon
+        ></mat-datepicker-toggle
+      >
+      <mat-datepicker #billDatepicker></mat-datepicker>
+    </mat-form-field>
+  </div>
+  <div>
+    <button
+      mat-button
+      mat-raised-button
+      color="primary"
+      (click)="onCreateBill()"
+    >
+      Create
+    </button>
+  </div>
+</div>

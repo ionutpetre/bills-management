@@ -1,0 +1,7 @@
+<div class="row" *ngIf="bills">
+  <app-bill-vertical-bar-chart [bills]="bills"></app-bill-vertical-bar-chart>
+</div>
+
+<div class="row">
+  <app-bill-create (create)="createBill($event)"></app-bill-create>
+</div>
